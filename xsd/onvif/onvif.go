@@ -1835,9 +1835,9 @@ type GeoOrientation struct {
 }
 
 type FocusMove struct {
-	Absolute   AbsoluteFocus   `xml:"onvif:Absolute"`
-	Relative   RelativeFocus   `xml:"onvif:Relative"`
-	Continuous ContinuousFocus `xml:"onvif:Continuous"`
+	Absolute   *AbsoluteFocus   `xml:"onvif:Absolute,omitempty"`
+	Relative   *RelativeFocus   `xml:"onvif:Relative,omitempty"`
+	Continuous *ContinuousFocus `xml:"onvif:Continuous,omitempty"`
 }
 
 type ContinuousFocus struct {
